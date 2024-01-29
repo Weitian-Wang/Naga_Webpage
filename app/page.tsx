@@ -66,13 +66,12 @@ export default function Home() {
       {/* contact us */}
       <section id="contact" className={styles.section}>
         <div className={styles.content}>
-          <Input></Input>
-          <p>NAME</p><input></input>
-          <p>EMAIL</p><input></input>
-          <p>PHONE</p><input></input>
-          <p>SERVICE</p><input></input>
-          <p>BUDGET</p><input></input>
-          <p>TELL US MORE ABOUT YOU</p><input></input>
+          <Input name="Name"></Input>
+          <Input name="Email"></Input>
+          <Input name="Phone"></Input>
+          <Input name="Service"></Input>
+          <Input name="Budget"></Input>
+          <Input name="Notes"></Input>
         </div>
       </section>
       {/* main location? */}
