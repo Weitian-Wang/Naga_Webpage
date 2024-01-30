@@ -40,5 +40,4 @@ function Input(props: Props) {
   };
 }
 
-
 export default Input
