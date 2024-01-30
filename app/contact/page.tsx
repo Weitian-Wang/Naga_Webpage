@@ -27,6 +27,7 @@ export default function Home() {
           <Input name="Budget"></Input>
           <Input name="Notes"></Input>
         </div>
+        
       </section>
       {/* main location? */}
       </main>
