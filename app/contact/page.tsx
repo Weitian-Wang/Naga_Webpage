@@ -22,10 +22,10 @@ export default function Home() {
         <div className={styles.content}>
           <Input name="Name"></Input>
           <Input name="Email"></Input>
-          <Input name="Phone"></Input>
+          <Input name="Phone"  type="number" placeholder="optional" isRequired={false}></Input>
           <Input name="Service"></Input>
-          <Input name="Budget"></Input>
-          <Input name="Notes"></Input>
+          <Input name="Budget" type="number" placeholder="optional" isRequired={false}></Input>
+          <Input name="Additional Notes" type="textarea" placeholder="optional" isRequired={false}></Input>
         </div>
         
       </section>

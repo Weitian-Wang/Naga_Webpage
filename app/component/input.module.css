@@ -1,16 +1,16 @@
 /* TODO: make component responsive to dark mode and multiple screen size */
 .inputBox {
     position: relative;
-    margin-top: 1em;
+    margin-top: 1.5em;
     /* margin: auto; */
-    width: 100px;
+    max-width: 600px;
     font-weight: 300;
     color: black;
     justify-content: left;
 }
 
 .input {
-    all: unset;
+    /* all: unset; */
     color: black;
     padding: 1rem;
     border: 2px solid black;
@@ -26,6 +26,11 @@
     color: black;
     pointer-events: none;
     transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-0.5rem) translateY(-130%) scale(1);
+    border-radius: 0.1 rem;
+    background-color: white;
+    /* padding-inline: 0.5rem; */
+    padding-inline: 0.5rem;
 }
 
 .input:focus {
@@ -34,10 +39,9 @@
     color: var(--default-font);
 }
 
-.input:is(:focus, :valid) ~ label {
+/* .input:is(:focus, :valid) ~ label {
     transform: translateX(-0.5rem) translateY(-130%) scale(1);
     border-radius: 0.1 rem;
     background-color: white;
-    /* padding-inline: 0.5rem; */
     padding-inline: 0.5rem;
-}
+} */
