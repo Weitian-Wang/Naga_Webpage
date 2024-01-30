@@ -2,11 +2,11 @@
 import React from 'react';
 import styles from './input.module.css'
 
-type reactProps = {
+type Props = {
   name: string;
 }
 
-function Input(props: reactProps) {
+function Input(props: Props) {
   return (
     <div className={styles.inputBox}>
       <input className={styles.input} required type='txt' id={props.name}/>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import styles from "./page.module.css"
 
 export const metadata: Metadata = {
   title: "Naga Ventures",

@@ -7,7 +7,6 @@ import styles from "./page.module.css"
 export default function Home() {
   return (
     <main>
-      <div>&nbsp;</div>
       <header className={styles.siteHeader}>
         <h1 className={styles.logo}>NAGA</h1>
         <div className={styles.navWrapper}>
@@ -89,7 +88,6 @@ export default function Home() {
           <p>Email: customer_support@naga.com</p>
         </div>
       </div>
-      <div>&nbsp;</div>
     </main>
   );
 }
