@@ -105,14 +105,12 @@ body {
 html {
   /* Create a snapping rule on the html element */
   scroll-snap-type: y mandatory;
-  /* Create a timeline scope, so we can target any element on the page */
-  timeline-scope: --section, --main, --site-header;
 }
 
 body {
   font-family: 'Gill Sans', sans-serif;
   color: rgb(var(--foreground-rgb));
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 main {

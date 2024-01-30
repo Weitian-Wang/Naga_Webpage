@@ -36,7 +36,7 @@
 
 .input:is(:focus, :valid) ~ label {
     transform: translateX(-0.5rem) translateY(-130%) scale(1);
-    border-radius: 0.1rem;
+    border-radius: 0.1 rem;
     background-color: white;
     /* padding-inline: 0.5rem; */
     padding-inline: 0.5rem;
