@@ -1,17 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Node.js Server Deployment
 
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -20,17 +14,33 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Static Deployment and Host Static Web Server
 
-To learn more about Next.js, take a look at the following resources:
+The website is deployed on AWS in a similar static fashion. Most bugs present in the static deployment will come through in production.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Project will be built in to a static site according to `next.config.mjs`. The output files will be in the `out` folder.  
 
-## Deploy on Vercel
+Host with browser-sync or any other static web server of choice.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install -g browser-sync
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+cd out
+
+npx browser-sync start --server
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+For reload, rebuild the project and refresh page.  
+
+## Continuous Deployment
+The secret variables are configured in the repo setting/secrets.  
+
+The project is automatic to be built and deployed when a new version is committed to `main` branch, the actions are defined in `deploy.yml`.
+
+
