@@ -1,20 +1,14 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css"
+import Header from "../component/header"
 
 export default function Home() {
   return (
     <div>
       {/* header */}
-      <header className={styles.siteHeader}>
-        <h1 className={styles.logo}>NAGA</h1>
-        <div className={styles.navWrapper}>
-            <a href="/about" className={styles.navLabel}>About</a>
-            <a href="/services" className={styles.navLabel}>Services</a>
-            <a href="/partners" className={styles.navLabel}>Partners</a>
-            <a href="/contact" className={styles.navLabel}>Contact</a>
-        </div>
-      </header>
+      <Header></Header>
 
       <main>
 

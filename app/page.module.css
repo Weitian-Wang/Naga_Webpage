@@ -1,74 +1,3 @@
-.siteHeader {
-    padding-top: calc(var(--spacing) / 2);
-    padding-bottom: calc(var(--spacing) / 3);
-    padding-inline: 3rem;
-    backdrop-filter: blur(2px);
-    position: fixed;
-    inset-inline: 0;
-    z-index: 10000;
-    /* animation-timeline: --site-header; */
-}
-
-.logo {
-    all: unset;
-    color: var(--color-text);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: calc(var(--font-size) * 2.5);
-    font-weight: 400;
-    letter-spacing: 0.2em;
-    margin: 0;
-}
-
-.siteHeader label:last-of-type {
-    view-timeline: --site-header inline;
-}
-
-
-
-.navWrapper {
-    height: inherit;
-    align-items: center;
-    justify-content: center;
-    overflow: visible;
-}
-
-.navLabel {
-    --transition: 0.01s;
-    font-size: var(--font-size);
-    text-decoration: none;
-    color: inherit;
-    border-radius: inherit;
-    overflow: hidden;
-    padding-inline: var(--spacing);
-    padding-block: calc(var(--spacing) / 4);
-    position: relative;
-    white-space: nowrap;
-}
-
-.navLabel::before {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: calc(var(--font-size)*0.15); /* Adjust thickness of underline */
-    bottom: 0;
-    left: 50%;
-    background-color: transparent; /* Initial color of underline */
-    transition: all 0.5s ease; /* Animation transition */
-}
-
-
-.navLabel:hover::before {
-    width: 100%;
-    left: 0;
-    background-color: var(--brand-theme-color);
-}
-
-@media (prefers-color-scheme: dark){
-    .navLabel:hover::before {
-        background-color: white;
-    }
-}
-
 .section {
     padding-inline: 3rem;
     /* Creating a snapping rule on the section element */
@@ -79,6 +8,8 @@
     view-timeline: --section;
     /* Set each section to the full dynamic height of the viewport */
     height: 100dvh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .content {
@@ -119,24 +50,8 @@
     backdrop-filter: blur(2px);
 }
 
-
-@keyframes blink {
-    0%,
-    100% {
-      filter: blur(var(--blur)) contrast(var(--contrast));
-      opacity: 0;
-      visibility: hidden;
-    }
-  
-    50% {
-      filter: blur(0) contrast(1);
-      opacity: 1;
-      visibility: visible;
-    }
-}
-
 /* large screen */
-@media screen and (min-width: 50rem){
+@media screen and (min-width: 48rem){
     .siteHeader{
         /* apply the same padding for section and footer */
         padding-inline: 3rem;
@@ -156,5 +71,6 @@
         font-weight: 400;
         letter-spacing: 0.2em;
         margin: 0;
+        cursor: pointer;
     }
 }
