@@ -1,5 +1,5 @@
 .section {
-    padding-inline: 3rem;
+    padding-inline: 2rem;
     /* Creating a snapping rule on the section element */
     scroll-snap-align: start;
     -webkit-scroll-snap-align: start;
@@ -50,27 +50,8 @@
     backdrop-filter: blur(2px);
 }
 
-/* large screen */
 @media screen and (min-width: 48rem){
-    .siteHeader{
-        /* apply the same padding for section and footer */
+    .section {
         padding-inline: 3rem;
-        display: flex;
-        inset-block-start: 0;
-        inset-block-end: auto;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
-    }
-
-    .logo {
-        all: unset;
-        color: var(--color-text);
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: calc(var(--font-size) * 2.5);
-        font-weight: 400;
-        letter-spacing: 0.2em;
-        margin: 0;
-        cursor: pointer;
     }
 }

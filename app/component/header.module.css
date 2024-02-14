@@ -1,12 +1,16 @@
 .siteHeader {
     padding-top: calc(var(--spacing)*1.5);
     padding-bottom: calc(var(--spacing) / 3);
-    padding-inline: 3rem;
+    padding-inline: 2rem;
     backdrop-filter: blur(2px);
     position: fixed;
     inset-inline: 0;
     z-index: 10000;
     /* animation-timeline: --site-header; */
+}
+
+.siteHeader.active{
+    backdrop-filter: blur(10px);
 }
 
 .logo {
@@ -23,6 +27,9 @@
 .menuLink {
     height: 30px;
     width: 33px;
+    float: right;
+    margin-top: calc(var(--spacing)/2.5);
+    display: block;
     cursor: pointer;
 }
 
@@ -35,6 +42,7 @@
     transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
+    background: grey;
 }
 
 .bar2 {
@@ -46,6 +54,7 @@
     transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
+    background: grey;
 }
 
 .bar3 {
@@ -57,18 +66,33 @@
     transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg);
+    background: grey;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
 }
 
 .navWrapper {
-    display: flex;
+    display: none;
     flex-direction: column;
     height: inherit;
     justify-content: center;
-    overflow: visible;
+}
+
+.navWrapper.active{
+    display: flex;
 }
 
 .navLabel {
-    --transition: 0.01s;
     font-size: calc(var(--font-size)*1.5);
     text-decoration: none;
     color: inherit;
@@ -117,6 +141,10 @@
         z-index: 10000;
     }
 
+    .siteHeader.active{
+        backdrop-filter: blur(2px);
+    }
+
     .logo {
         all: unset;
         color: var(--color-text);
@@ -128,6 +156,10 @@
         cursor: pointer;
     }
 
+    .menuLink {
+        display: none;
+    }
+    
     .navWrapper {
         display: flex;
         flex-direction: row;
@@ -148,8 +180,8 @@
         padding-block: calc(var(--spacing) / 4);
         position: relative;
         white-space: nowrap;
-    }
-    
+    } 
+
     .navLabel::before {
         content: '';
         position: absolute;
