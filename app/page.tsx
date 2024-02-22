@@ -4,6 +4,7 @@ import Link from "next/link";
 import Input from "./component/Input"
 import Partner from "./component/partner";
 import Header from "./component/header"
+import Footer from "./component/footer"
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -73,15 +74,7 @@ export default function Home() {
         </div>
       </section>
       {/* main location? */}
-      {/* copy right */}
-      <div className={styles.footer}>
-        <div>
-          <p>© 2024 NAGA VENTURES LLC. All rights reserved.</p>
-          <p>Registered Address 30 N Gould St Ste R, Sheridan, Wyoming 82801</p>
-          <p>Phone: 626-0182-NAGA</p>
-          <p>Email: customer_support@naga.com</p>
-        </div>
-      </div>
+      <Footer></Footer>
     </main>
   );
 }
