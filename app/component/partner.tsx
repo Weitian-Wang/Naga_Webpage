@@ -9,7 +9,7 @@ type Props = {
 function Partner(props: Props) {
   return (
     <div className={styles.partnerWrapper}>
-        <div><Image src={props.img_url} className={styles.customerImg} alt="customer" width={240} height={150}></Image></div>
+        <div className={styles.imageContainer}><Image src={props.img_url} className={styles.customerImg} alt="customer" width={240} height={150}></Image></div>
         <div className={styles.partnerName}>{props.partnerName}</div>
     </div>
   )

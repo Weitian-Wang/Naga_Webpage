@@ -1,6 +1,15 @@
+.partnerWrapper{
+    width: inherit;
+}
+
+.imageContainer{
+    display: flex;
+    justify-content: center;
+}
+
 .customerImg {
-    width: calc(max(24vw, 240px));
-    height: calc(max(15vw, 150px));
+    max-width: 100%;
+    height: auto;
 }
 
 .partnerName {

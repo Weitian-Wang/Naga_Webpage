@@ -1,4 +1,6 @@
 .section {
+    display: flex;
+    align-items: center; /* Center vertically */
     padding-inline: 2rem;
     /* Creating a snapping rule on the section element */
     scroll-snap-align: start;
@@ -14,13 +16,14 @@
 
 .content {
     /* Fix the content, so it doesn't scroll with the section */
-    padding-top: calc(var(--spacing) / 4 + var(--font-size) * 10);
+    /* padding-top: calc(var(--spacing) / 4 + var(--font-size) * 10); */
     /* display: flex; */
     /* flex-direction: column; */
     /* justify-content: space-between; */
     /* overflow: hidden; */
     /* position: fixed; */
     inset: 0;
+    width: 100%;
     /* padding-inline: 3rem; */
     /* Animate the content based on the section scrolling */
     --contrast: 4;
@@ -33,11 +36,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 @media screen and (min-width: 48rem){
     .section {
         padding-inline: 3rem;
+    }
+}
+
+.customerWrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: repeat(auto, auto);
+}
+
+@media screen and (min-width: 30rem){
+    .customerWrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(auto, auto);
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    .customerWrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(auto, auto);
     }
 }
